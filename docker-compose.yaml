@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/opt/helloworld/app
     ports:
@@ -17,11 +16,11 @@ services:
       - ./prometheus:/etc/prometheus
       - prometheus_data:/opt/prometheus/data
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--web.console.templates=/etc/prometheus'
-      - '--web.console.libraries=/etc/prometheus/console_libraries'
-      - '--storage.tsdb.path=/prometheus'
-      - '--storage.tsdb.no-lockfile'
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--web.console.templates=/etc/prometheus"
+      - "--web.console.libraries=/etc/prometheus/console_libraries"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.no-lockfile"
     ports:
       - "9090:9090"
   grafana:
