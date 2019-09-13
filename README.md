@@ -1,3 +1,5 @@
+[![Github Actions status](https://action-badges.now.sh/neegor/helloworldcloud)](https://github.com/neegor/helloworldcloud/actions)
+
 # HelloWorld Django Web App Example
 
 Это простое докеризированое Django приложение с целью продемонстрировать:
