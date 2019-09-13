@@ -1,6 +1,6 @@
-[![Github Actions status](https://action-badges.now.sh/neegor/helloworldcloud)](https://github.com/neegor/helloworldcloud/actions)
-
 # HelloWorld Django Web App Example
+
+[![Github Actions status](https://action-badges.now.sh/neegor/helloworldcloud)](https://github.com/neegor/helloworldcloud/actions)
 
 Это простое докеризированое Django приложение с целью продемонстрировать:
 * как сделать Dockerfile
