@@ -49,15 +49,15 @@ kubectl create -f ./kubernetes/autoscaler.yaml
 kubectl create -f ./kubernetes/job.yaml
 ```
 
-### Test Dockerfile
+### Тестирование Dockerfile
 
 ```bash
 # Install latest version to /usr/local/bin
 curl -fsSL https://goss.rocks/install | sh
 # Build docker
-docker build -t helloworld .
+docker build -t helloworldcloud .
 # Start test
-dgoss run helloworld
+dgoss run helloworldcloud
 ```
 
 ВНИМАНИЕ! ДАННЫЙ ПРИМЕР ЯВЛЯЕТСЯ ДЕМОНСТРАЦИОННЫМ И НЕ МОЖЕТ РАССМАТРИВАТЬСЯ КАК ПРОДАКШЕН РЕШЕНИЕ.
