@@ -1,2 +1,2 @@
-Django==2.2.5
+Django==2.2.6
 django-prometheus==1.0.15
