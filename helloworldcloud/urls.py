@@ -14,13 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from web.views import helloWorldView, healthzPageView, readinessPageView
+from django.urls import include, path
+
+from web.views import HelloWorldView, healthz_page_view, readiness_page_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", helloWorldView.as_view()),
-    path("healthz/", healthzPageView, name="healthz"),
-    path("readiness/", healthzPageView, name="readiness"),
+    path("", HelloWorldView.as_view()),
+    path("healthz/", healthz_page_view, name="healthz"),
+    path("readiness/", readiness_page_view, name="readiness"),
     path('', include('django_prometheus.urls')),
 ]

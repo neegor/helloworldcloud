@@ -1,7 +1,7 @@
 from django.test import TestCase
 
-class YourTestClass(TestCase):
 
+class YourTestClass(TestCase):
     def test_false_is_false(self):
         print("Method: test_false_is_false.")
         self.assertFalse(False)
