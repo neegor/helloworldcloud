@@ -1,5 +1,6 @@
 # HelloWorld Django Web App Example
 
+[![Code style: yapf](https://img.shields.io/badge/code%20style-yapf-orange)](https://github.com/google/yapf)
 [![Github Actions status](https://action-badges.now.sh/neegor/helloworldcloud)](https://github.com/neegor/helloworldcloud/actions)
 
 Это простое докеризированое Django приложение с целью продемонстрировать:
