@@ -5,10 +5,14 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    container_name: helloworldcloud
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/opt/helloworld/app
+      - .:/home/app/helloworldcloud
     ports:
-      - "8000:8000"
+      - 8000:8000
+    tty: true
+    restart: on-failure
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
@@ -22,7 +26,8 @@ services:
       - "--storage.tsdb.path=/prometheus"
       - "--storage.tsdb.no-lockfile"
     ports:
-      - "9090:9090"
+      - 9090:9090
+    restart: on-failure
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
@@ -36,6 +41,7 @@ services:
       - prometheus
     ports:
       - 3000:3000
+    restart: on-failure
 volumes:
   prometheus_data:
   grafana_data:
