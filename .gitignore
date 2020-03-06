@@ -67,3 +67,5 @@ logger_settings.py
 
 .vscode/
 media/
+venv/
+.venv/
