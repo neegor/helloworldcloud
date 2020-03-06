@@ -1,11 +1,9 @@
 from django.test import TestCase
+from django.test import tag
 
 
+@tag("unit")
 class YourTestClass(TestCase):
-    def test_false_is_false(self):
-        print("Method: test_false_is_false.")
-        self.assertFalse(False)
-
-    def test_one_plus_one_equals_two(self):
-        print("Method: test_one_plus_one_equals_two.")
-        self.assertEqual(1 + 1, 2)
+    def test_helloworld_page(self):
+        response = self.client.get("/")
+        self.assertEqual(response.status_code, 200)
