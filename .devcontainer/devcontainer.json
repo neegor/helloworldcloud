@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.101.1/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+	"name": "HelloWorldCloud",
+
+	"dockerComposeFile": [
+		"..\\docker-compose.yaml",
+		"docker-compose.yml"
+	],
+	"service": "helloworld",
+	"workspaceFolder": "/workspace",
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"ms-ceintl.vscode-language-pack-ru",
+		"ms-python.python",
+		"eamodio.gitlens",
+		"visualstudioexptteam.vscodeintellicode"
+	],
+	"postCreateCommand": "chmod 600 /home/app/.ssh/id_rsa",
+	"remoteUser": "app"
+}
