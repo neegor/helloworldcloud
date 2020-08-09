@@ -22,7 +22,7 @@ jobs:
         python manage.py check
     - name: Lint with prospector
       run: |
-        prospector --tool pylint --tool pep8 --tool mccabe --tool pyflakes --tool mccabe --max-line-length 120
+        prospector --tool pylint --tool pep8 --tool mccabe --tool pyflakes --max-line-length 120
     - name: Test with unittest
       run: |
         python manage.py test
