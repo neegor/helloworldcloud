@@ -22,4 +22,4 @@ jobs:
     - name: Test with unittest
       run: python manage.py test
     - name: Check for Django
-      run: .python manage.py check
+      run: python manage.py check
