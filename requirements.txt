@@ -1,5 +1,5 @@
 Django==3.2.7
-django-prometheus==2.1.0
+django-prometheus==2.2.0
 
 # Develop
 prospector==1.5.0.1              # python linter
